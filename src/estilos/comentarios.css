@@ -1,0 +1,167 @@
+/* Estilo del panel de comentarios */
+.comentarios-panel {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .comentarios-panel {   
+    margin-top: 1rem;
+    display: block;
+    margin-top: initial;
+    width: 100%;
+    
+  }
+  .card-comentarios{
+    margin-bottom: 150px;
+  }
+  .comentarios-lista {
+  
+    display: block;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  .comentario-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-block-end: 10px;
+  }
+  .comentario-item p {
+    margin: 0.5rem 0;
+  }
+  
+  .comentario-item button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .comentario-item button:hover {
+    background-color: #c0392b;
+  }
+  
+
+  .comentarios-panel h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  
+  }
+  
+  /* Dropdown */
+  .dropdown {
+    background-color: black !important;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1em;
+  }
+  
+  /* Lista de comentarios */
+  .comentarios-lista ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* .comentario-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  } */
+  
+  /* Header del comentario */
+  .comentario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    
+  }
+  
+  .alias-cliente {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .comentario-fecha {
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  /* Texto del comentario */
+  .comentario-texto {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Botón de denuncia */
+  .denuncia-boton {
+    background: #ff6961 ;
+    color: black !important;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .denuncia-boton:hover {
+    background: #ff4941;
+    color: black !important;
+  }
+  
+  .DatosComentador{
+    display: flex;
+    justify-content: space-between;
+  }
+  .AddComentario {
+    display: none; /* Oculto por defecto */
+  }
+  
+  .AddComentario.comentario-item {
+    display: block; /* Visible solo cuando se muestra */
+  }
+  textarea {
+    width: 100%;
+    height: 100px; /* Altura fija */
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none; /* Desactiva la redimensión */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    box-sizing: border-box; 
+  }
+  .btnGuardar{
+    margin-right: 30px;
+    background-color: green !important;
+  }
+
+  @keyframes show{
+    from{
+      opacity: 0; scale: 10%;
+    }
+    to{
+      opacity: 1; scale: 100%;
+    }
+  }
+  
+  .comentario-item{
+    view-timeline-name:  --reveal;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 10% cover 40%;
+  }

@@ -1,0 +1,11 @@
+.page-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.btn-link{
+    border-color: blueviolet;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+    outline: none;
+}  

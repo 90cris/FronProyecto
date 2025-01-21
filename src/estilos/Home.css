@@ -1,0 +1,14 @@
+.centered-container {
+  margin-top: 50px;
+
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: start; /* Centra el contenido verticalmente */
+
+  text-align: center; /* Asegura que el texto esté centrado dentro del contenedor */
+}
+
+.hero-title {
+  font-size: 3rem; /* Ajusta el tamaño de la fuente según tus necesidades */
+  font-weight: bold; /* Pone el texto en negrita */
+  color: #c4c4c4; /* Ajusta el color del texto según tus necesidades */
+}

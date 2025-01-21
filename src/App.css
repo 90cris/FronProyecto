@@ -1,0 +1,15 @@
+#root { 
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+ 
+
+}
+
+.contenedor{
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  
+}

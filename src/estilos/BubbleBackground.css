@@ -1,0 +1,43 @@
+body {
+    background-color: #000000;
+    /* overflow: hidden; */
+  }
+  
+  .bubble {
+    position: fixed; /* Cambia de absolute a fixed */
+    z-index: 9999; /* Asegura que las burbujas estén siempre visibles */
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: bubbleAnimation 1s ease-out forwards;
+    width: 2vw;
+    height: 2vw;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 150px;
+    max-height: 150px;
+    color: #3a8de0;
+    border-radius: 50%;
+  }
+  
+  .bubble-dummy {
+    /* content: ""; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 0.2em solid currentColor;
+  }
+  
+  .heart {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+  
+  .heart path {
+    fill: #e27373;
+    stroke: none;
+  }
+  

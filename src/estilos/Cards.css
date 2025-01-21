@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita desplazamiento horizontal */
+  overflow-y: auto !important;   /* Asegura desplazamiento vertical */
+  height: 100%;
+}
+
+.card-wrapper {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius : 25px;
+  background: linear-gradient(45deg, pink, red, yellow);   
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.card {
+  cursor: pointer;
+  width: 210px !important; /* Ancho de la tarjeta */
+  height: 350px !important; 
+  border-radius: 10px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff; /* Fondo blanco */
+  /* transition: transform 0.1s ease, box-shadow 0.1s ease, border 0.1s ease; */
+  position: relative;
+  /*animacion conf
+  */
+  view-timeline-name:  --reveal;
+  animation-name: show;
+  animation-fill-mode: both;
+  animation-timeline: --reveal;
+  animation-range: entry 25% cover 50%; 
+}
+
+.card:hover {
+  /* transform: scale(1.05);
+  border: 2.5px solid #000000 !important; */
+  box-shadow: 0 0 5px #000000;
+}
+.card-img-top {
+
+  width: 210px ; /* Ancho fijo */
+  height: 290px !important; /* Alto fijo */
+  object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+  border-bottom: 1px solid #ccc; /* Línea divisoria entre imagen y cuerpo */
+}
+.card-body {
+  margin: 0 auto;
+  padding: 0 !important;
+ /* height: 70px !important;  Resto del espacio para el contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-title {
+  font-size: 16px;
+  margin: 2px 0;
+  color: #333; /* Color de texto */
+  font-weight: bold;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.content {
+  margin-top: 60px; /* Ajusta este valor según la altura del navbar */
+}
+
+@media (min-width: 1000px) {
+  .card-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Para pantallas entre 700px y 1000px */
+@media (min-width: 700px) and (max-width: 1000px) {
+  .card-wrapper {
+    grid-template-columns: repeat(3, 1fr);  
+  }  
+    .card {
+      width: 160px; /* Ancho de la tarjeta */
+      height: 200px !important; 
+      margin-left: 25px;
+      margin-right: -15px;
+    }
+    .card-body {
+      width: 40px;
+      height: 20px; /* Resto del espacio para el contenido */
+      display: contents;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .card-img-top {
+      width: 155px; /* Ancho fijo */
+      height: 190px; /* Alto fijo */
+      object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+      border-bottom: 1px solid #ccc; /* Línea divisoria entre imagen y cuerpo */
+    }
+    .card-title {
+      font-size: 12px;
+      margin: 2px 0;
+      color: #333; /* Color de texto */
+      font-weight: bold;
+    }
+  }
+
+
+/* Para pantallas menores a 700px */
+@media (max-width: 700px) {
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+    .card {
+      width: 160px; /* Ancho de la tarjeta */
+      height: 240px !important; 
+      margin-left: 25px;
+      margin-right: -15px;
+    }
+    .card-body {
+      width: 40px;
+      height: 20px; /* Resto del espacio para el contenido */
+      display: contents;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .card-img-top {
+      width: 155px; /* Ancho fijo */
+      height: 190px; /* Alto fijo */
+      object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+      border-bottom: 1px solid #ccc; /* Línea divisoria entre imagen y cuerpo */
+    }
+    .card-title {
+      font-size: 12px;
+      margin: 2px 0;
+      color: #333; /* Color de texto */
+      font-weight: bold;
+    }
+  }
+
+@keyframes show{
+  from{
+    opacity: 0; scale: 10%;
+  }
+  to{
+    opacity: 1; scale: 100%;
+  }
+}
+

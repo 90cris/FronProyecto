@@ -1,0 +1,12 @@
+html, body {
+  height: 100%;
+
+  position: relative !important;/* Asegura que los hijos posicionados funcionen correctamente */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
