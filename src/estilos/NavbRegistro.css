@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: start;
-  min-height: 100vh;
+  min-height: 70px;
   background-color: black;
 }
 nav {
@@ -19,18 +19,29 @@ nav {
 }
 
 nav ul {
-    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 49px;
+  /* display: flex;
     padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  nav li {
-    padding-inline: 40px;
-    list-style: none;
-    cursor: pointer;
-  }
+    margin: 0; */
+  list-style: none;
+}
+nav li {
+  justify-content: center !important;
+  align-items: center !important;
+  padding-inline: 40px;
+  list-style: none;
+  cursor: pointer;
+  height: 45px;
+}
 
 nav a {
+  margin-top: 8px;
+  width: 100px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
   position: relative;
   display: inline-block;
   font-size: 1em;
@@ -46,20 +57,20 @@ nav span {
   left: 135px;
   width: 95px;
   height: 100%;
-  background: linear-gradient(45deg, #194b, red);
+  background: linear-gradient(45deg, rgb(93, 24, 157), white);
   border-radius: 10px;
   transition: 0.5s;
 }
 
 .liNav {
-    padding-inline: 20px;
+  padding: 0;
   list-style: none;
 }
 nav li.active a {
-    color: black;   
-    padding: 2px 2px;
-    border-radius: 5px;
-  }
+  color: black;
+  padding: 2px 2px;
+  border-radius: 5px;
+}
 
 nav li:nth-child(1):hover ~ span,
 nav li:nth-child(1) a:hover ~ span {
@@ -69,4 +80,8 @@ nav li:nth-child(1) a:hover ~ span {
 nav li:nth-child(2):hover ~ span,
 nav li:nth-child(2) a:hover ~ span {
   left: 240px;
+}
+.contenedor-outlet {
+  display: flex;
+  flex-direction: column;
 }

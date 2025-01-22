@@ -85,29 +85,19 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/NavbLogin">
+              <Link className="nav-link" to="/Login">
                 Ingresar
               </Link>
             </li>
-            {/* <li className="nav-item">
-              <Link className="nav-link" to="/RegistroCliente">
-                Registro Cliente
-              </Link>
-            </li> */}
-            {/* <li className="nav-item">
-              <Link className="nav-link" to="/Login">
-                Inicio Usuario
-              </Link>
-            </li> */}
+
             <li className="nav-item">
-              <Link className="nav-link" to="/NavbRegitro">
+              <Link className="nav-link" to="/registro">
                 Registrate
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item  pruebaCiudad">
               <Link className="nav-link" to="/CambiarCiudad">
-                Cambiar Ciudad
-                {/* Consejos Clientes */}
+                Cambiar Ciudad            
               </Link>
             </li>
             <li className="nav-item">

@@ -32,12 +32,18 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/registro" element={<NavbLogin />} />
-              {/* <Route path="/Login" element={<Login />} />
-          <Route path="/LoginCliente" element={<LoginCliente />} /> */}
-              <Route path="/NavbRegitro" element={<NavbRegitro />} />
-              <Route path="/usuario" element={<Registro />} />
-              <Route path="/cliente" element={<RegistroCliente />} />
+
+              <Route path="/Login" element={<NavbLogin />}>
+              <Route index element={<LoginCliente />} />
+              <Route path="clienteLogin" element={<LoginCliente />} />
+              <Route path="usuarioLogin" element={<Login />} />
+              </Route>
+
+              <Route path="/registro" element={<NavbRegitro />}>
+                <Route index element={<RegistroCliente />} />
+                <Route path="cliente" element={<RegistroCliente />} />
+                <Route path="usuario" element={<Registro />} />
+              </Route>
               <Route path="/Cards" element={<Cards />} />
               <Route path="/Card" element={<Card />} />
               <Route path="/CambiarCiudad" element={<CambiarCiudad />} />

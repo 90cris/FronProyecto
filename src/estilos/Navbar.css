@@ -1,20 +1,32 @@
-/* Estilo general de la barra de navegación */
+
 .navbar {
   background-color: black !important;
   padding: 0% !important;
   height: 50px;
-  /* position: absolute !important ; */
-  /* z-index: 1; */
   position: relative;
 }
+
 .nav-item {
-  display: flex; /* Asegura un diseño flexible */
-  align-items: center; /* Centra el contenido verticalmente */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  white-space: nowrap; /* Evita que el texto se desborde en varias líneas */
-  padding: 0.1rem ; /* Espaciado interno uniforme */
-  height: 50px; /* Altura fija */
-  transition: all 0.3s ease; /* Transición suave para hover */
+  /* display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  white-space: nowrap; 
+  padding: 0.1rem ; 
+  height: 50px; 
+  transition: all 0.3s ease;  */
+  align-items: center !important; 
+  justify-content: center !important; 
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox para centrar contenido */
+  /* padding: 0.5rem 1rem;  */
+  min-width: 120px; 
+  max-width: 100%; 
+  white-space: nowrap; /* Evitar que el texto se corte en varias líneas */
+  overflow: hidden; /* Ocultar texto desbordado */
+  text-overflow: ellipsis; /* Agregar puntos suspensivos si el texto es demasiado largo */
+  transition: all 0.3s ease; /* Suavizar cambios */
 }
 .navbar-brand {
   display: flex;
@@ -25,19 +37,20 @@
   margin-right: 10px;
 }
 
-/* .navbar-brand .banner-logo {
-    height: auto;
-   
-  } */
 
 .navbar-nav {
   display: flex;
-  align-items: center;
+  align-items: center !important; 
+  justify-content: center !important; 
 }
 
 .nav-link {
   color: white !important;
   transition: all 0.3s ease;
+  margin: 0;
+  padding: 0 !important;
+  min-width: 100%; 
+  max-width: 125px; 
 }
 
 .nav-link:hover {
@@ -55,7 +68,6 @@
   position: absolute;
   z-index: 2;
   height: 60px;
-  /* right: 20px;  */
 }
 
 .cerrar-menu, .abrir-menu{
@@ -71,6 +83,10 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* .pruebaCiudad{
+  
+} */
 /* Menú hamburguesa y responsividad */
 @media (max-width: 993px) {
   .navbar-collapse {
@@ -88,7 +104,7 @@
 
   .nav-link {
     padding: 10px 15px; /* Espaciado adicional en columnas */
-    width: 100%; /* Ocupa todo el ancho */
+    width: 100%; 
   }
 }
 

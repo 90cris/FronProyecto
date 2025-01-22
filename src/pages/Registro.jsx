@@ -150,7 +150,7 @@ export const Registro = () => {
   return (
     <div>
       <div className="registro-container">
-        <h1 className="h1-title">Formulario de Registro</h1>
+        <h1 className="h1-title">Registro Usuario</h1>
         {alert && (
           <div className={`alert alert-${alert.type}`} role="alert">
             {alert.message}
